@@ -1,0 +1,422 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"78 C:\Users\DELL\Desktop\sistema_cifrado\main.c
+[e E1451 . `uc
+ESTADO_S0 0
+ESTADO_S1 1
+ESTADO_S2 2
+ESTADO_S3 3
+ESTADO_S4 4
+ESTADO_S5 5
+ESTADO_S6 6
+ESTADO_S7 7
+ESTADO_S8 8
+ESTADO_S9 9
+]
+"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"20 C:\Users\DELL\Desktop\sistema_cifrado\crypto.c
+[v _cifrar_byte cifrar_byte `(uc  1 e 1 0 ]
+"36
+[v _descifrar_byte descifrar_byte `(uc  1 e 1 0 ]
+"55
+[v _byte_a_hex byte_a_hex `(v  1 e 1 0 ]
+"72
+[v _hex_a_nibble hex_a_nibble `(a  1 e 1 0 ]
+"100
+[v _hex_a_bytes hex_a_bytes `(a  1 e 1 0 ]
+"34 C:\Users\DELL\Desktop\sistema_cifrado\keypad.c
+[v _keypad_escanear keypad_escanear `(uc  1 s 1 keypad_escanear ]
+"75
+[v _keypad_configurar keypad_configurar `(v  1 e 1 0 ]
+"106
+[v _keypad_habilitar_ioc keypad_habilitar_ioc `(v  1 e 1 0 ]
+"123
+[v _keypad_rearme keypad_rearme `(v  1 e 1 0 ]
+"140
+[v _isr isr `II(v  1 e 1 0 ]
+"14 C:\Users\DELL\Desktop\sistema_cifrado\lcd.c
+[v _lcd_enviar_nibble lcd_enviar_nibble `(v  1 s 1 lcd_enviar_nibble ]
+"30
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"65
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+"81
+[v _lcd_putc lcd_putc `(v  1 e 1 0 ]
+"94
+[v _lcd_puts lcd_puts `(v  1 e 1 0 ]
+"108
+[v _lcd_goto lcd_goto `(v  1 e 1 0 ]
+"130
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+"83 C:\Users\DELL\Desktop\sistema_cifrado\main.c
+[v _hardware_init hardware_init `(v  1 s 1 hardware_init ]
+"101
+[v _limpiar_buffers limpiar_buffers `(v  1 s 1 limpiar_buffers ]
+"127
+[v _mostrar_menu mostrar_menu `(v  1 s 1 mostrar_menu ]
+"137
+[v _mostrar_mensaje_completo mostrar_mensaje_completo `(v  1 s 1 mostrar_mensaje_completo ]
+"147
+[v _mostrar_prompt_clave mostrar_prompt_clave `(v  1 s 1 mostrar_prompt_clave ]
+"157
+[v _iniciar_captura_mensaje iniciar_captura_mensaje `(v  1 s 1 iniciar_captura_mensaje ]
+"177
+[v _iniciar_captura_criptograma iniciar_captura_criptograma `(v  1 s 1 iniciar_captura_criptograma ]
+"199
+[v _mensaje_caracter_valido mensaje_caracter_valido `(a  1 s 1 mensaje_caracter_valido ]
+"217
+[v _mostrar_resultado_cifrado mostrar_resultado_cifrado `(v  1 s 1 mostrar_resultado_cifrado ]
+"246
+[v _mostrar_resultado_descifrado mostrar_resultado_descifrado `(v  1 s 1 mostrar_resultado_descifrado ]
+"287
+[v _regresar_menu regresar_menu `(v  1 s 1 regresar_menu ]
+"298
+[v _procesar_tecla procesar_tecla `(v  1 s 1 procesar_tecla ]
+"470
+[v _main main `(v  1 e 1 0 ]
+"212 C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"336
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S118 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"353
+[u S127 . 1 `S118 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES127  1 e 1 @8 ]
+"443
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S56 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"466
+[s S65 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S70 . 1 `S56 1 . 1 0 `S65 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES70  1 e 1 @11 ]
+"1330
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1462
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1586
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S141 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1603
+[u S150 . 1 `S141 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES150  1 e 1 @136 ]
+"2330
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"2400
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+"3371
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3433
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"12 C:\Users\DELL\Desktop\sistema_cifrado\crypto.c
+[v _HEX HEX `DC[17]uc  1 e 17 0 ]
+"11 C:\Users\DELL\Desktop\sistema_cifrado\keypad.c
+[v _g_tecla_evento g_tecla_evento `VEuc  1 e 1 0 ]
+"14
+[v _g_bandera_tecla g_bandera_tecla `VEuc  1 e 1 0 ]
+"20
+[v _mapa_teclas mapa_teclas `DC[4][4]uc  1 s 16 mapa_teclas ]
+"51 C:\Users\DELL\Desktop\sistema_cifrado\main.c
+[v _mensaje mensaje `[5]uc  1 s 5 mensaje ]
+"57
+[v _hex_entrada hex_entrada `[9]uc  1 s 9 hex_entrada ]
+"60
+[v _criptograma criptograma `[4]uc  1 s 4 criptograma ]
+"66
+[v _hex_salida hex_salida `[9]uc  1 s 9 hex_salida ]
+"69
+[v _clave clave `uc  1 s 1 clave ]
+"72
+[v _indice_mensaje indice_mensaje `uc  1 s 1 indice_mensaje ]
+"75
+[v _indice_hex indice_hex `uc  1 s 1 indice_hex ]
+"78
+[v _estado_actual estado_actual `E1451  1 s 1 estado_actual ]
+"470
+[v _main main `(v  1 e 1 0 ]
+{
+"472
+[v main@tecla tecla `uc  1 a 1 19 ]
+"506
+} 0
+"298
+[v _procesar_tecla procesar_tecla `(v  1 s 1 procesar_tecla ]
+{
+[v procesar_tecla@tecla tecla `uc  1 p 1 wreg ]
+"300
+[v procesar_tecla@caracter_hex caracter_hex `uc  1 a 1 15 ]
+"298
+[v procesar_tecla@tecla tecla `uc  1 p 1 wreg ]
+[v procesar_tecla@tecla tecla `uc  1 p 1 16 ]
+"463
+} 1
+"287
+[v _regresar_menu regresar_menu `(v  1 s 1 regresar_menu ]
+{
+"292
+} 0
+"127
+[v _mostrar_menu mostrar_menu `(v  1 s 1 mostrar_menu ]
+{
+"134
+} 0
+"101
+[v _limpiar_buffers limpiar_buffers `(v  1 s 1 limpiar_buffers ]
+{
+"103
+[v limpiar_buffers@i i `uc  1 a 1 0 ]
+"124
+} 0
+"246
+[v _mostrar_resultado_descifrado mostrar_resultado_descifrado `(v  1 s 1 mostrar_resultado_descifrado ]
+{
+"248
+[v mostrar_resultado_descifrado@i i `uc  1 a 1 11 ]
+"249
+[v mostrar_resultado_descifrado@caracter_original caracter_original `uc  1 a 1 10 ]
+"284
+} 0
+"177
+[v _iniciar_captura_criptograma iniciar_captura_criptograma `(v  1 s 1 iniciar_captura_criptograma ]
+{
+"179
+[v iniciar_captura_criptograma@i i `uc  1 a 1 9 ]
+"192
+} 0
+"100 C:\Users\DELL\Desktop\sistema_cifrado\crypto.c
+[v _hex_a_bytes hex_a_bytes `(a  1 e 1 0 ]
+{
+"102
+[v hex_a_bytes@i i `uc  1 a 1 8 ]
+"104
+[v hex_a_bytes@bajo bajo `uc  1 a 1 7 ]
+"103
+[v hex_a_bytes@alto alto `uc  1 a 1 6 ]
+"100
+[v hex_a_bytes@hex hex `*.4DCuc  1 p 1 2 ]
+[v hex_a_bytes@bytes bytes `*.4uc  1 p 1 3 ]
+"129
+} 0
+"72
+[v _hex_a_nibble hex_a_nibble `(a  1 e 1 0 ]
+{
+[v hex_a_nibble@caracter caracter `uc  1 p 1 wreg ]
+[v hex_a_nibble@caracter caracter `uc  1 p 1 wreg ]
+[v hex_a_nibble@nibble nibble `*.4uc  1 p 1 0 ]
+"74
+[v hex_a_nibble@caracter caracter `uc  1 p 1 1 ]
+"92
+} 1
+"36
+[v _descifrar_byte descifrar_byte `(uc  1 e 1 0 ]
+{
+[v descifrar_byte@cifrado cifrado `uc  1 p 1 wreg ]
+"38
+[v descifrar_byte@resultado_resta resultado_resta `uc  1 a 1 2 ]
+"36
+[v descifrar_byte@cifrado cifrado `uc  1 p 1 wreg ]
+[v descifrar_byte@clave clave `uc  1 p 1 0 ]
+"45
+[v descifrar_byte@cifrado cifrado `uc  1 p 1 1 ]
+"48
+} 1
+"217 C:\Users\DELL\Desktop\sistema_cifrado\main.c
+[v _mostrar_resultado_cifrado mostrar_resultado_cifrado `(v  1 s 1 mostrar_resultado_cifrado ]
+{
+"219
+[v mostrar_resultado_cifrado@i i `uc  1 a 1 11 ]
+"220
+[v mostrar_resultado_cifrado@posicion posicion `uc  1 a 1 10 ]
+"241
+} 0
+"20 C:\Users\DELL\Desktop\sistema_cifrado\crypto.c
+[v _cifrar_byte cifrar_byte `(uc  1 e 1 0 ]
+{
+[v cifrar_byte@mensaje mensaje `uc  1 p 1 wreg ]
+"22
+[v cifrar_byte@resultado_xor resultado_xor `uc  1 a 1 2 ]
+"20
+[v cifrar_byte@mensaje mensaje `uc  1 p 1 wreg ]
+[v cifrar_byte@clave clave `uc  1 p 1 0 ]
+"24
+[v cifrar_byte@mensaje mensaje `uc  1 p 1 1 ]
+"28
+} 1
+"55
+[v _byte_a_hex byte_a_hex `(v  1 e 1 0 ]
+{
+[v byte_a_hex@valor valor `uc  1 p 1 wreg ]
+[v byte_a_hex@valor valor `uc  1 p 1 wreg ]
+[v byte_a_hex@salida salida `*.4uc  1 p 1 0 ]
+"57
+[v byte_a_hex@valor valor `uc  1 p 1 3 ]
+"64
+} 1
+"147 C:\Users\DELL\Desktop\sistema_cifrado\main.c
+[v _mostrar_prompt_clave mostrar_prompt_clave `(v  1 s 1 mostrar_prompt_clave ]
+{
+"152
+} 0
+"137
+[v _mostrar_mensaje_completo mostrar_mensaje_completo `(v  1 s 1 mostrar_mensaje_completo ]
+{
+"144
+} 0
+"199
+[v _mensaje_caracter_valido mensaje_caracter_valido `(a  1 s 1 mensaje_caracter_valido ]
+{
+[v mensaje_caracter_valido@caracter caracter `uc  1 p 1 wreg ]
+[v mensaje_caracter_valido@caracter caracter `uc  1 p 1 wreg ]
+"201
+[v mensaje_caracter_valido@caracter caracter `uc  1 p 1 0 ]
+"212
+} 1
+"157
+[v _iniciar_captura_mensaje iniciar_captura_mensaje `(v  1 s 1 iniciar_captura_mensaje ]
+{
+"159
+[v iniciar_captura_mensaje@i i `uc  1 a 1 9 ]
+"172
+} 0
+"94 C:\Users\DELL\Desktop\sistema_cifrado\lcd.c
+[v _lcd_puts lcd_puts `(v  1 e 1 0 ]
+{
+[v lcd_puts@texto texto `*.26DCuc  1 p 2 6 ]
+"101
+} 0
+"81
+[v _lcd_putc lcd_putc `(v  1 e 1 0 ]
+{
+[v lcd_putc@caracter caracter `uc  1 p 1 wreg ]
+"83
+[v lcd_putc@dato dato `uc  1 a 1 5 ]
+"81
+[v lcd_putc@caracter caracter `uc  1 p 1 wreg ]
+"83
+[v lcd_putc@caracter caracter `uc  1 p 1 4 ]
+"88
+} 1
+"108
+[v _lcd_goto lcd_goto `(v  1 e 1 0 ]
+{
+[v lcd_goto@fila fila `uc  1 p 1 wreg ]
+"110
+[v lcd_goto@direccion direccion `uc  1 a 1 7 ]
+"108
+[v lcd_goto@fila fila `uc  1 p 1 wreg ]
+[v lcd_goto@columna columna `uc  1 p 1 6 ]
+"112
+[v lcd_goto@fila fila `uc  1 p 1 8 ]
+"127
+} 1
+"30
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"59
+} 0
+"130
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+{
+"133
+} 0
+"65
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+{
+[v lcd_command@comando comando `uc  1 p 1 wreg ]
+[v lcd_command@comando comando `uc  1 p 1 wreg ]
+"67
+[v lcd_command@comando comando `uc  1 p 1 5 ]
+"75
+} 1
+"14
+[v _lcd_enviar_nibble lcd_enviar_nibble `(v  1 s 1 lcd_enviar_nibble ]
+{
+[v lcd_enviar_nibble@nibble nibble `uc  1 p 1 wreg ]
+[v lcd_enviar_nibble@nibble nibble `uc  1 p 1 wreg ]
+"16
+[v lcd_enviar_nibble@nibble nibble `uc  1 p 1 2 ]
+"25
+} 1
+"123 C:\Users\DELL\Desktop\sistema_cifrado\keypad.c
+[v _keypad_rearme keypad_rearme `(v  1 e 1 0 ]
+{
+"125
+[v keypad_rearme@lectura lectura `VEuc  1 a 1 0 ]
+"133
+} 0
+"106
+[v _keypad_habilitar_ioc keypad_habilitar_ioc `(v  1 e 1 0 ]
+{
+"108
+[v keypad_habilitar_ioc@lectura lectura `VEuc  1 a 1 0 ]
+"117
+} 0
+"83 C:\Users\DELL\Desktop\sistema_cifrado\main.c
+[v _hardware_init hardware_init `(v  1 s 1 hardware_init ]
+{
+"96
+} 0
+"75 C:\Users\DELL\Desktop\sistema_cifrado\keypad.c
+[v _keypad_configurar keypad_configurar `(v  1 e 1 0 ]
+{
+"77
+[v keypad_configurar@lectura lectura `VEuc  1 a 1 0 ]
+"101
+} 0
+"140
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"142
+[v isr@tecla tecla `uc  1 a 1 9 ]
+"143
+[v isr@lectura lectura `VEuc  1 a 1 10 ]
+"183
+} 0
+"34
+[v _keypad_escanear keypad_escanear `(uc  1 s 1 keypad_escanear ]
+{
+"37
+[v keypad_escanear@columna columna `uc  1 a 1 4 ]
+"36
+[v keypad_escanear@fila fila `uc  1 a 1 3 ]
+"38
+[v keypad_escanear@columnas columnas `uc  1 a 1 2 ]
+"69
+} 0

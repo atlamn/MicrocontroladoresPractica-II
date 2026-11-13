@@ -1,0 +1,281 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"12 crypto.c
+[; ;crypto.c: 12: const char HEX[] = "0123456789ABCDEF";
+[v _HEX `Cuc ~T0 @X0 -> 17 `i e ]
+[i _HEX
+:U ..
+-> 48 `c
+-> 49 `c
+-> 50 `c
+-> 51 `c
+-> 52 `c
+-> 53 `c
+-> 54 `c
+-> 55 `c
+-> 56 `c
+-> 57 `c
+-> 65 `c
+-> 66 `c
+-> 67 `c
+-> 68 `c
+-> 69 `c
+-> 70 `c
+-> 0 `c
+..
+]
+"20
+[; ;crypto.c: 20: uint8_t cifrar_byte(uint8_t mensaje, uint8_t clave)
+[v _cifrar_byte `(uc ~T0 @X0 1 ef2`uc`uc ]
+"21
+[; ;crypto.c: 21: {
+{
+[e :U _cifrar_byte ]
+"20
+[; ;crypto.c: 20: uint8_t cifrar_byte(uint8_t mensaje, uint8_t clave)
+[v _mensaje `uc ~T0 @X0 1 r1 ]
+[v _clave `uc ~T0 @X0 1 r2 ]
+"21
+[; ;crypto.c: 21: {
+[f ]
+"22
+[; ;crypto.c: 22:     uint8_t resultado_xor;
+[v _resultado_xor `uc ~T0 @X0 1 a ]
+"24
+[; ;crypto.c: 24:     resultado_xor = (uint8_t)(mensaje ^ clave);
+[e = _resultado_xor -> ^ -> _mensaje `i -> _clave `i `uc ]
+"27
+[; ;crypto.c: 27:     return (uint8_t)(resultado_xor + 5u);
+[e ) -> + -> _resultado_xor `ui -> 5 `ui `uc ]
+[e $UE 1  ]
+"28
+[; ;crypto.c: 28: }
+[e :UE 1 ]
+}
+"36
+[; ;crypto.c: 36: uint8_t descifrar_byte(uint8_t cifrado, uint8_t clave)
+[v _descifrar_byte `(uc ~T0 @X0 1 ef2`uc`uc ]
+"37
+[; ;crypto.c: 37: {
+{
+[e :U _descifrar_byte ]
+"36
+[; ;crypto.c: 36: uint8_t descifrar_byte(uint8_t cifrado, uint8_t clave)
+[v _cifrado `uc ~T0 @X0 1 r1 ]
+[v _clave `uc ~T0 @X0 1 r2 ]
+"37
+[; ;crypto.c: 37: {
+[f ]
+"38
+[; ;crypto.c: 38:     uint8_t resultado_resta;
+[v _resultado_resta `uc ~T0 @X0 1 a ]
+"45
+[; ;crypto.c: 45:     resultado_resta = (uint8_t)(cifrado - 5u);
+[e = _resultado_resta -> - -> _cifrado `ui -> 5 `ui `uc ]
+"47
+[; ;crypto.c: 47:     return (uint8_t)(resultado_resta ^ clave);
+[e ) -> ^ -> _resultado_resta `i -> _clave `i `uc ]
+[e $UE 2  ]
+"48
+[; ;crypto.c: 48: }
+[e :UE 2 ]
+}
+"55
+[; ;crypto.c: 55: void byte_a_hex(uint8_t valor, char salida[2])
+[v _byte_a_hex `(v ~T0 @X0 1 ef2`uc`*uc ]
+"56
+[; ;crypto.c: 56: {
+{
+[e :U _byte_a_hex ]
+"55
+[; ;crypto.c: 55: void byte_a_hex(uint8_t valor, char salida[2])
+[v _valor `uc ~T0 @X0 1 r1 ]
+[v _salida `*uc ~T0 @X0 1 r2 ]
+"56
+[; ;crypto.c: 56: {
+[f ]
+"57
+[; ;crypto.c: 57:     if (salida == ((void*)0))
+[e $ ! == _salida -> -> -> 0 `i `*v `*uc 4  ]
+"58
+[; ;crypto.c: 58:     {
+{
+"59
+[; ;crypto.c: 59:         return;
+[e $UE 3  ]
+"60
+[; ;crypto.c: 60:     }
+}
+[e :U 4 ]
+"62
+[; ;crypto.c: 62:     salida[0] = HEX[(valor >> 4u) & 0x0Fu];
+[e = *U + _salida * -> -> 0 `i `x -> -> # *U _salida `i `x *U + &U _HEX * -> & -> >> -> _valor `i -> 4 `ui `ui -> 15 `ui `ux -> -> # *U &U _HEX `ui `ux ]
+"63
+[; ;crypto.c: 63:     salida[1] = HEX[valor & 0x0Fu];
+[e = *U + _salida * -> -> 1 `i `x -> -> # *U _salida `i `x *U + &U _HEX * -> & -> _valor `ui -> 15 `ui `ux -> -> # *U &U _HEX `ui `ux ]
+"64
+[; ;crypto.c: 64: }
+[e :UE 3 ]
+}
+"72
+[; ;crypto.c: 72: _Bool hex_a_nibble(char caracter, uint8_t *nibble)
+[v _hex_a_nibble `(a ~T0 @X0 1 ef2`uc`*uc ]
+"73
+[; ;crypto.c: 73: {
+{
+[e :U _hex_a_nibble ]
+"72
+[; ;crypto.c: 72: _Bool hex_a_nibble(char caracter, uint8_t *nibble)
+[v _caracter `uc ~T0 @X0 1 r1 ]
+[v _nibble `*uc ~T0 @X0 1 r2 ]
+"73
+[; ;crypto.c: 73: {
+[f ]
+"74
+[; ;crypto.c: 74:     if (nibble == ((void*)0))
+[e $ ! == _nibble -> -> -> 0 `i `*v `*uc 6  ]
+"75
+[; ;crypto.c: 75:     {
+{
+"76
+[; ;crypto.c: 76:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 5  ]
+"77
+[; ;crypto.c: 77:     }
+}
+[e :U 6 ]
+"79
+[; ;crypto.c: 79:     if ((caracter >= '0') && (caracter <= '9'))
+[e $ ! && >= -> _caracter `ui -> 48 `ui <= -> _caracter `ui -> 57 `ui 7  ]
+"80
+[; ;crypto.c: 80:     {
+{
+"81
+[; ;crypto.c: 81:         *nibble = (uint8_t)(caracter - '0');
+[e = *U _nibble -> - -> _caracter `ui -> 48 `ui `uc ]
+"82
+[; ;crypto.c: 82:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 5  ]
+"83
+[; ;crypto.c: 83:     }
+}
+[e :U 7 ]
+"85
+[; ;crypto.c: 85:     if ((caracter >= 'A') && (caracter <= 'F'))
+[e $ ! && >= -> _caracter `ui -> 65 `ui <= -> _caracter `ui -> 70 `ui 8  ]
+"86
+[; ;crypto.c: 86:     {
+{
+"87
+[; ;crypto.c: 87:         *nibble = (uint8_t)(caracter - 'A' + 10);
+[e = *U _nibble -> + - -> _caracter `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+"88
+[; ;crypto.c: 88:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 5  ]
+"89
+[; ;crypto.c: 89:     }
+}
+[e :U 8 ]
+"91
+[; ;crypto.c: 91:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 5  ]
+"92
+[; ;crypto.c: 92: }
+[e :UE 5 ]
+}
+"100
+[; ;crypto.c: 100: _Bool hex_a_bytes(const char hex[9], uint8_t bytes[4])
+[v _hex_a_bytes `(a ~T0 @X0 1 ef2`*Cuc`*uc ]
+"101
+[; ;crypto.c: 101: {
+{
+[e :U _hex_a_bytes ]
+"100
+[; ;crypto.c: 100: _Bool hex_a_bytes(const char hex[9], uint8_t bytes[4])
+[v _hex `*Cuc ~T0 @X0 1 r1 ]
+[v _bytes `*uc ~T0 @X0 1 r2 ]
+"101
+[; ;crypto.c: 101: {
+[f ]
+"102
+[; ;crypto.c: 102:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"103
+[; ;crypto.c: 103:     uint8_t alto;
+[v _alto `uc ~T0 @X0 1 a ]
+"104
+[; ;crypto.c: 104:     uint8_t bajo;
+[v _bajo `uc ~T0 @X0 1 a ]
+"106
+[; ;crypto.c: 106:     if ((hex == ((void*)0)) || (bytes == ((void*)0)))
+[e $ ! || == _hex -> -> -> 0 `i `*v `*Cuc == _bytes -> -> -> 0 `i `*v `*uc 10  ]
+"107
+[; ;crypto.c: 107:     {
+{
+"108
+[; ;crypto.c: 108:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 9  ]
+"109
+[; ;crypto.c: 109:     }
+}
+[e :U 10 ]
+"111
+[; ;crypto.c: 111:     for (i = 0u; i < 4u; i++)
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 4 `ui 11  ]
+[e $U 12  ]
+[e :U 11 ]
+"112
+[; ;crypto.c: 112:     {
+{
+"113
+[; ;crypto.c: 113:         if (!hex_a_nibble(hex[(uint8_t)(2u * i)], &alto))
+[e $ ! ! != -> ( _hex_a_nibble (2 , *U + _hex * -> -> * -> 2 `ui -> _i `ui `uc `ux -> -> # *U _hex `ui `ux &U _alto `i -> 0 `i 14  ]
+"114
+[; ;crypto.c: 114:         {
+{
+"115
+[; ;crypto.c: 115:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 9  ]
+"116
+[; ;crypto.c: 116:         }
+}
+[e :U 14 ]
+"118
+[; ;crypto.c: 118:         if (!hex_a_nibble(hex[(uint8_t)(2u * i + 1u)], &bajo))
+[e $ ! ! != -> ( _hex_a_nibble (2 , *U + _hex * -> -> + * -> 2 `ui -> _i `ui -> 1 `ui `uc `ux -> -> # *U _hex `ui `ux &U _bajo `i -> 0 `i 15  ]
+"119
+[; ;crypto.c: 119:         {
+{
+"120
+[; ;crypto.c: 120:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 9  ]
+"121
+[; ;crypto.c: 121:         }
+}
+[e :U 15 ]
+"123
+[; ;crypto.c: 123:         bytes[i] = (uint8_t)(
+[e = *U + _bytes * -> _i `ux -> -> # *U _bytes `ui `ux -> | -> -> << -> _alto `i -> 4 `ui `uc `i -> _bajo `i `uc ]
+"126
+[; ;crypto.c: 126:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 4 `ui 11  ]
+[e :U 12 ]
+}
+"128
+[; ;crypto.c: 128:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 9  ]
+"129
+[; ;crypto.c: 129: }
+[e :UE 9 ]
+}

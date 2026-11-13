@@ -1,0 +1,1375 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"78 main.c
+[; ;main.c: 78:     for (i = 0u; i < 5u; i++)
+[c E1451 0 1 2 3 4 5 6 7 8 9 .. ]
+[n E1451 . ESTADO_S0 ESTADO_S1 ESTADO_S2 ESTADO_S3 ESTADO_S4 ESTADO_S5 ESTADO_S6 ESTADO_S7 ESTADO_S8 ESTADO_S9  ]
+"443 C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 443: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
+[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
+"3371
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3371: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3433
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3433: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1586
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1586: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"336
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 336: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"29 ./keypad.h
+[; ;./keypad.h: 29: void keypad_configurar(void);
+[v _keypad_configurar `(v ~T0 @X0 0 ef ]
+"42 ./lcd.h
+[; ;./lcd.h: 42: void lcd_clear(void);
+[v _lcd_clear `(v ~T0 @X0 0 ef ]
+"39
+[; ;./lcd.h: 39: void lcd_goto(uint8_t fila, uint8_t columna);
+[v _lcd_goto `(v ~T0 @X0 0 ef2`uc`uc ]
+"32
+[; ;./lcd.h: 32: void lcd_puts(const char *texto);
+[v _lcd_puts `(v ~T0 @X0 0 ef1`*Cuc ]
+"20 ./crypto.h
+[; ;./crypto.h: 20: uint8_t cifrar_byte(uint8_t mensaje, uint8_t clave);
+[v _cifrar_byte `(uc ~T0 @X0 0 ef2`uc`uc ]
+"35
+[; ;./crypto.h: 35: void byte_a_hex(uint8_t valor, char salida[2]);
+[v _byte_a_hex `(v ~T0 @X0 0 ef2`uc`*uc ]
+"51
+[; ;./crypto.h: 51: _Bool hex_a_bytes(const char hex[9], uint8_t bytes[4]);
+[v _hex_a_bytes `(a ~T0 @X0 0 ef2`*Cuc`*uc ]
+"28
+[; ;./crypto.h: 28: uint8_t descifrar_byte(uint8_t cifrado, uint8_t clave);
+[v _descifrar_byte `(uc ~T0 @X0 0 ef2`uc`uc ]
+"26 ./lcd.h
+[; ;./lcd.h: 26: void lcd_putc(char caracter);
+[v _lcd_putc `(v ~T0 @X0 0 ef1`uc ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+[p mainexit ]
+"14 ./lcd.h
+[; ;./lcd.h: 14: void lcd_init(void);
+[v _lcd_init `(v ~T0 @X0 0 ef ]
+"32 ./keypad.h
+[; ;./keypad.h: 32: void keypad_habilitar_ioc(void);
+[v _keypad_habilitar_ioc `(v ~T0 @X0 0 ef ]
+"23
+[; ;./keypad.h: 23: extern volatile uint8_t g_bandera_tecla;
+[v _g_bandera_tecla `Vuc ~T0 @X0 0 e ]
+"17
+[; ;./keypad.h: 17: extern volatile uint8_t g_tecla_evento;
+[v _g_tecla_evento `Vuc ~T0 @X0 0 e ]
+"35
+[; ;./keypad.h: 35: void keypad_rearme(void);
+[v _keypad_rearme `(v ~T0 @X0 0 ef ]
+"38 C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 38: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"45
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 45: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"52
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 52: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"59
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 59: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"145
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 145: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"152
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 152: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"214
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 214: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"276
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 276: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"338
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 338: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"400
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 400: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"438
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 438: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"445
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 445: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"523
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 523: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"579
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 579: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"751
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 751: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"758
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 758: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"829
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 829: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"836
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 836: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"906
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 906: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"913
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 913: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"920
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 920: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"927
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 927: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"1024
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1024: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1119
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1119: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1126
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1126: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1133
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1133: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1140
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1140: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1147
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1147: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1154
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1154: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1224
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1224: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1231
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1231: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1332
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1332: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1402
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1402: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1464
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1464: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1526
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1526: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1588
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1588: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1650
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1650: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1688
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1688: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1744
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1744: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1801
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1801: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1848
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1848: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1913
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1913: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1965
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 1965: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"2027
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2027: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"2034
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2034: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"2041
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2041: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"2046
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2046: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2163
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2163: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2332
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2332: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2402
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2402: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2472
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2472: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2542
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2542: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2628
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2628: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2690
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2690: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2760
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2760: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2830
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2830: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2912
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2912: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2956
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2956: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2963
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2963: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2997
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 2997: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"3050
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3050: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"3115
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3115: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3180
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3180: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3231
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3231: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3236
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3236: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3243
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3243: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3250
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3250: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3257
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3257: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3264
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3264: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3321
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3321: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3373
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3373: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3435
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3435: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3485
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3485: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3530
+[; ;C:/Program Files/Microchip/MPLABX/v6.35/packs/Microchip/PIC16Fxxx_DFP/1.8.167/xc8\pic\include\proc/pic16f887.h: 3530: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 main.c
+[; ;main.c: 14:     ESTADO_S6,
+[p x FOSC  =  XT ]
+"15
+[; ;main.c: 15:     ESTADO_S7,
+[p x WDTE  =  OFF ]
+"16
+[; ;main.c: 16:     ESTADO_S8,
+[p x PWRTE  =  ON ]
+"17
+[; ;main.c: 17:     ESTADO_S9
+[p x MCLRE  =  ON ]
+"18
+[; ;main.c: 18: } EstadoSistema;
+[p x CP  =  OFF ]
+"19
+[; ;main.c: 19: 
+[p x CPD  =  OFF ]
+"20
+[; ;main.c: 20: 
+[p x BOREN  =  OFF ]
+"21
+[; ;main.c: 21: 
+[p x IESO  =  OFF ]
+"22
+[; ;main.c: 22: 
+[p x FCMEN  =  OFF ]
+"23
+[; ;main.c: 23: 
+[p x LVP  =  OFF ]
+"24
+[; ;main.c: 24: static char mensaje[5];
+[p x DEBUG  =  OFF ]
+"25
+[; ;main.c: 25: 
+[p x WRT  =  OFF ]
+"51
+[; ;main.c: 51: static EstadoSistema estado_actual = ESTADO_S0;
+[v _mensaje `uc ~T0 @X0 -> 5 `i s ]
+"57
+[; ;main.c: 57: {
+[v _hex_entrada `uc ~T0 @X0 -> 9 `i s ]
+"60
+[; ;main.c: 60: 
+[v _criptograma `uc ~T0 @X0 -> 4 `i s ]
+"66
+[; ;main.c: 66:     PORTD = 0x00;
+[v _hex_salida `uc ~T0 @X0 -> 9 `i s ]
+"69
+[; ;main.c: 69: }
+[v _clave `uc ~T0 @X0 1 s ]
+"72
+[; ;main.c: 72: 
+[v _indice_mensaje `uc ~T0 @X0 1 s ]
+"75
+[; ;main.c: 75: {
+[v _indice_hex `uc ~T0 @X0 1 s ]
+"78
+[; ;main.c: 78:     for (i = 0u; i < 5u; i++)
+[v _estado_actual `E1451 ~T0 @X0 1 s ]
+[i _estado_actual
+. `E1451 0
+]
+"83
+[; ;main.c: 83:     for (i = 0u; i < 9u; i++)
+[v _hardware_init `(v ~T0 @X0 1 sf ]
+"84
+[; ;main.c: 84:     {
+{
+[e :U _hardware_init ]
+[f ]
+"85
+[; ;main.c: 85:         hex_entrada[i] = '\0';
+[e = _INTCON -> -> 0 `i `uc ]
+"88
+[; ;main.c: 88: 
+[e = _ANSEL -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89:     for (i = 0u; i < 4u; i++)
+[e = _ANSELH -> -> 0 `i `uc ]
+"92
+[; ;main.c: 92:     }
+[e = _TRISD -> -> 12 `i `uc ]
+"93
+[; ;main.c: 93: 
+[e = _PORTD -> -> 0 `i `uc ]
+"95
+[; ;main.c: 95:     indice_hex = 0u;
+[e ( _keypad_configurar ..  ]
+"96
+[; ;main.c: 96:     clave = 0u;
+[e :UE 142 ]
+}
+"101
+[; ;main.c: 101: {
+[v _limpiar_buffers `(v ~T0 @X0 1 sf ]
+"102
+[; ;main.c: 102:     lcd_clear();
+{
+[e :U _limpiar_buffers ]
+[f ]
+"103
+[; ;main.c: 103:     lcd_goto(0u, 0u);
+[v _i `uc ~T0 @X0 1 a ]
+"105
+[; ;main.c: 105:     lcd_goto(1u, 0u);
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 5 `ui 144  ]
+[e $U 145  ]
+[e :U 144 ]
+"106
+[; ;main.c: 106:     lcd_puts("B: Descifrar");
+{
+"107
+[; ;main.c: 107: }
+[e = *U + &U _mensaje * -> _i `ux -> -> # *U &U _mensaje `ui `ux -> -> 0 `ui `uc ]
+"108
+[; ;main.c: 108: 
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 5 `ui 144  ]
+[e :U 145 ]
+}
+"110
+[; ;main.c: 110: static void mostrar_mensaje_completo(void)
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 9 `ui 147  ]
+[e $U 148  ]
+[e :U 147 ]
+"111
+[; ;main.c: 111: {
+{
+"112
+[; ;main.c: 112:     lcd_clear();
+[e = *U + &U _hex_entrada * -> _i `ux -> -> # *U &U _hex_entrada `ui `ux -> -> 0 `ui `uc ]
+"113
+[; ;main.c: 113:     lcd_goto(0u, 0u);
+[e = *U + &U _hex_salida * -> _i `ux -> -> # *U &U _hex_salida `ui `ux -> -> 0 `ui `uc ]
+"114
+[; ;main.c: 114:     lcd_puts("Mensaje completo");
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 9 `ui 147  ]
+[e :U 148 ]
+}
+"116
+[; ;main.c: 116:     lcd_puts(mensaje);
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 4 `ui 150  ]
+[e $U 151  ]
+[e :U 150 ]
+"117
+[; ;main.c: 117: }
+{
+"118
+[; ;main.c: 118: 
+[e = *U + &U _criptograma * -> _i `ux -> -> # *U &U _criptograma `ui `ux -> -> 0 `ui `uc ]
+"119
+[; ;main.c: 119: 
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 4 `ui 150  ]
+[e :U 151 ]
+}
+"121
+[; ;main.c: 121: {
+[e = _indice_mensaje -> -> 0 `ui `uc ]
+"122
+[; ;main.c: 122:     lcd_clear();
+[e = _indice_hex -> -> 0 `ui `uc ]
+"123
+[; ;main.c: 123:     lcd_goto(0u, 0u);
+[e = _clave -> -> 0 `ui `uc ]
+"124
+[; ;main.c: 124:     lcd_puts("Ingrese clave:");
+[e :UE 143 ]
+}
+"127
+[; ;main.c: 127: 
+[v _mostrar_menu `(v ~T0 @X0 1 sf ]
+"128
+[; ;main.c: 128: 
+{
+[e :U _mostrar_menu ]
+[f ]
+"129
+[; ;main.c: 129: 
+[e ( _lcd_clear ..  ]
+"130
+[; ;main.c: 130: static void iniciar_captura_mensaje(void)
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"131
+[; ;main.c: 131: {
+[e ( _lcd_puts (1 :s 1C ]
+"132
+[; ;main.c: 132:     uint8_t i;
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"133
+[; ;main.c: 133: 
+[e ( _lcd_puts (1 :s 2C ]
+"134
+[; ;main.c: 134:     for (i = 0u; i < 5u; i++)
+[e :UE 153 ]
+}
+"137
+[; ;main.c: 137:     }
+[v _mostrar_mensaje_completo `(v ~T0 @X0 1 sf ]
+"138
+[; ;main.c: 138: 
+{
+[e :U _mostrar_mensaje_completo ]
+[f ]
+"139
+[; ;main.c: 139:     indice_mensaje = 0u;
+[e ( _lcd_clear ..  ]
+"140
+[; ;main.c: 140: 
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"141
+[; ;main.c: 141:     lcd_clear();
+[e ( _lcd_puts (1 :s 3C ]
+"142
+[; ;main.c: 142:     lcd_goto(0u, 0u);
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"143
+[; ;main.c: 143:     lcd_puts("Mensaje: ");
+[e ( _lcd_puts (1 -> &U _mensaje `*Cuc ]
+"144
+[; ;main.c: 144:     lcd_goto(0u, 9u);
+[e :UE 154 ]
+}
+"147
+[; ;main.c: 147: 
+[v _mostrar_prompt_clave `(v ~T0 @X0 1 sf ]
+"148
+[; ;main.c: 148: 
+{
+[e :U _mostrar_prompt_clave ]
+[f ]
+"149
+[; ;main.c: 149: 
+[e ( _lcd_clear ..  ]
+"150
+[; ;main.c: 150: static void iniciar_captura_criptograma(void)
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"151
+[; ;main.c: 151: {
+[e ( _lcd_puts (1 :s 4C ]
+"152
+[; ;main.c: 152:     uint8_t i;
+[e :UE 155 ]
+}
+"157
+[; ;main.c: 157:     }
+[v _iniciar_captura_mensaje `(v ~T0 @X0 1 sf ]
+"158
+[; ;main.c: 158: 
+{
+[e :U _iniciar_captura_mensaje ]
+[f ]
+"159
+[; ;main.c: 159:     indice_hex = 0u;
+[v _i `uc ~T0 @X0 1 a ]
+"161
+[; ;main.c: 161:     lcd_clear();
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 5 `ui 157  ]
+[e $U 158  ]
+[e :U 157 ]
+"162
+[; ;main.c: 162:     lcd_goto(0u, 0u);
+{
+"163
+[; ;main.c: 163:     lcd_puts("Criptograma HEX:");
+[e = *U + &U _mensaje * -> _i `ux -> -> # *U &U _mensaje `ui `ux -> -> 0 `ui `uc ]
+"164
+[; ;main.c: 164:     lcd_goto(1u, 0u);
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 5 `ui 157  ]
+[e :U 158 ]
+}
+"166
+[; ;main.c: 166: 
+[e = _indice_mensaje -> -> 0 `ui `uc ]
+"168
+[; ;main.c: 168: 
+[e ( _lcd_clear ..  ]
+"169
+[; ;main.c: 169: 
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"170
+[; ;main.c: 170: 
+[e ( _lcd_puts (1 :s 5C ]
+"171
+[; ;main.c: 171: 
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 9 `ui `uc ]
+"172
+[; ;main.c: 172: static _Bool mensaje_caracter_valido(char caracter)
+[e :UE 156 ]
+}
+"177
+[; ;main.c: 177:     }
+[v _iniciar_captura_criptograma `(v ~T0 @X0 1 sf ]
+"178
+[; ;main.c: 178: 
+{
+[e :U _iniciar_captura_criptograma ]
+[f ]
+"179
+[; ;main.c: 179:     if ((caracter >= 'A') && (caracter <= 'D'))
+[v _i `uc ~T0 @X0 1 a ]
+"181
+[; ;main.c: 181:         return 1;
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 9 `ui 161  ]
+[e $U 162  ]
+[e :U 161 ]
+"182
+[; ;main.c: 182:     }
+{
+"183
+[; ;main.c: 183: 
+[e = *U + &U _hex_entrada * -> _i `ux -> -> # *U &U _hex_entrada `ui `ux -> -> 0 `ui `uc ]
+"184
+[; ;main.c: 184:     return (caracter == '#');
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 9 `ui 161  ]
+[e :U 162 ]
+}
+"186
+[; ;main.c: 186: 
+[e = _indice_hex -> -> 0 `ui `uc ]
+"188
+[; ;main.c: 188: 
+[e ( _lcd_clear ..  ]
+"189
+[; ;main.c: 189: 
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"190
+[; ;main.c: 190: static void mostrar_resultado_cifrado(void)
+[e ( _lcd_puts (1 :s 6C ]
+"191
+[; ;main.c: 191: {
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"192
+[; ;main.c: 192:     uint8_t i;
+[e :UE 160 ]
+}
+"199
+[; ;main.c: 199: 
+[v _mensaje_caracter_valido `(a ~T0 @X0 1 sf1`uc ]
+"200
+[; ;main.c: 200:         posicion = (uint8_t)(2u * i);
+{
+[e :U _mensaje_caracter_valido ]
+"199
+[; ;main.c: 199: 
+[v _caracter `uc ~T0 @X0 1 r1 ]
+"200
+[; ;main.c: 200:         posicion = (uint8_t)(2u * i);
+[f ]
+"201
+[; ;main.c: 201: 
+[e $ ! && >= -> _caracter `ui -> 48 `ui <= -> _caracter `ui -> 57 `ui 165  ]
+"202
+[; ;main.c: 202:         byte_a_hex(criptograma[i], &hex_salida[posicion]);
+{
+"203
+[; ;main.c: 203:     }
+[e ) -> -> 1 `i `a ]
+[e $UE 164  ]
+"204
+[; ;main.c: 204: 
+}
+[e :U 165 ]
+"206
+[; ;main.c: 206: 
+[e $ ! && >= -> _caracter `ui -> 65 `ui <= -> _caracter `ui -> 68 `ui 166  ]
+"207
+[; ;main.c: 207:     lcd_clear();
+{
+"208
+[; ;main.c: 208:     lcd_goto(0u, 0u);
+[e ) -> -> 1 `i `a ]
+[e $UE 164  ]
+"209
+[; ;main.c: 209:     lcd_puts("Cifrado (HEX):");
+}
+[e :U 166 ]
+"211
+[; ;main.c: 211:     lcd_puts(hex_salida);
+[e ) -> -> == -> _caracter `ui -> 35 `ui `i `a ]
+[e $UE 164  ]
+"212
+[; ;main.c: 212: 
+[e :UE 164 ]
+}
+"217
+[; ;main.c: 217: 
+[v _mostrar_resultado_cifrado `(v ~T0 @X0 1 sf ]
+"218
+[; ;main.c: 218: 
+{
+[e :U _mostrar_resultado_cifrado ]
+[f ]
+"219
+[; ;main.c: 219: static void mostrar_resultado_descifrado(void)
+[v _i `uc ~T0 @X0 1 a ]
+"220
+[; ;main.c: 220: {
+[v _posicion `uc ~T0 @X0 1 a ]
+"222
+[; ;main.c: 222:     uint8_t caracter_original;
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 4 `ui 168  ]
+[e $U 169  ]
+[e :U 168 ]
+"223
+[; ;main.c: 223: 
+{
+"225
+[; ;main.c: 225:     if (!hex_a_bytes(hex_entrada, criptograma))
+[e = *U + &U _criptograma * -> _i `ux -> -> # *U &U _criptograma `ui `ux ( _cifrar_byte (2 , -> *U + &U _mensaje * -> _i `ux -> -> # *U &U _mensaje `ui `ux `uc _clave ]
+"227
+[; ;main.c: 227:         iniciar_captura_criptograma();
+[e = _posicion -> * -> 2 `ui -> _i `ui `uc ]
+"229
+[; ;main.c: 229:         return;
+[e ( _byte_a_hex (2 , *U + &U _criptograma * -> _i `ux -> -> # *U &U _criptograma `ui `ux &U *U + &U _hex_salida * -> _posicion `ux -> -> # *U &U _hex_salida `ui `ux ]
+"230
+[; ;main.c: 230:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 4 `ui 168  ]
+[e :U 169 ]
+}
+"232
+[; ;main.c: 232:     for (i = 0u; i < 4u; i++)
+[e = *U + &U _hex_salida * -> -> -> 8 `i `ui `ux -> -> # *U &U _hex_salida `ui `ux -> -> 0 `ui `uc ]
+"234
+[; ;main.c: 234: 
+[e ( _lcd_clear ..  ]
+"235
+[; ;main.c: 235:         caracter_original = descifrar_byte(criptograma[i], clave);
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"236
+[; ;main.c: 236: 
+[e ( _lcd_puts (1 :s 7C ]
+"237
+[; ;main.c: 237:         if ((caracter_original < 0x20u) ||
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"238
+[; ;main.c: 238:             (caracter_original > 0x7Eu))
+[e ( _lcd_puts (1 -> &U _hex_salida `*Cuc ]
+"240
+[; ;main.c: 240:             mensaje[i] = '.';
+[e = _estado_actual . `E1451 5 ]
+"241
+[; ;main.c: 241:         }
+[e :UE 167 ]
+}
+"246
+[; ;main.c: 246:     }
+[v _mostrar_resultado_descifrado `(v ~T0 @X0 1 sf ]
+"247
+[; ;main.c: 247: 
+{
+[e :U _mostrar_resultado_descifrado ]
+[f ]
+"248
+[; ;main.c: 248:     mensaje[4] = '\0';
+[v _i `uc ~T0 @X0 1 a ]
+"249
+[; ;main.c: 249: 
+[v _caracter_original `uc ~T0 @X0 1 a ]
+"252
+[; ;main.c: 252:     lcd_puts("Mensaje Original");
+[e $ ! ! != -> ( _hex_a_bytes (2 , -> &U _hex_entrada `*Cuc &U _criptograma `i -> 0 `i 172  ]
+"253
+[; ;main.c: 253:     lcd_goto(1u, 0u);
+{
+"254
+[; ;main.c: 254:     lcd_puts(mensaje);
+[e ( _iniciar_captura_criptograma ..  ]
+"255
+[; ;main.c: 255: 
+[e = _estado_actual . `E1451 6 ]
+"256
+[; ;main.c: 256:     estado_actual = ESTADO_S9;
+[e $UE 171  ]
+"257
+[; ;main.c: 257: }
+}
+[e :U 172 ]
+"259
+[; ;main.c: 259: 
+{
+[e = _i -> -> 0 `ui `uc ]
+[e $ < -> _i `ui -> 4 `ui 173  ]
+[e $U 174  ]
+[e :U 173 ]
+"260
+[; ;main.c: 260: static void regresar_menu(void)
+{
+"262
+[; ;main.c: 262:     limpiar_buffers();
+[e = _caracter_original ( _descifrar_byte (2 , *U + &U _criptograma * -> _i `ux -> -> # *U &U _criptograma `ui `ux _clave ]
+"264
+[; ;main.c: 264:     estado_actual = ESTADO_S1;
+[e $ ! || < -> _caracter_original `ui -> 32 `ui > -> _caracter_original `ui -> 126 `ui 176  ]
+"266
+[; ;main.c: 266: 
+{
+"267
+[; ;main.c: 267: 
+[e = *U + &U _mensaje * -> _i `ux -> -> # *U &U _mensaje `ui `ux -> -> 46 `ui `uc ]
+"268
+[; ;main.c: 268: 
+}
+[e $U 177  ]
+"269
+[; ;main.c: 269: 
+[e :U 176 ]
+"270
+[; ;main.c: 270: 
+{
+"271
+[; ;main.c: 271: static void procesar_tecla(uint8_t tecla)
+[e = *U + &U _mensaje * -> _i `ux -> -> # *U &U _mensaje `ui `ux -> _caracter_original `uc ]
+"272
+[; ;main.c: 272: {
+}
+[e :U 177 ]
+"273
+[; ;main.c: 273:     char caracter_hex;
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> 4 `ui 173  ]
+[e :U 174 ]
+}
+"275
+[; ;main.c: 275:     switch (estado_actual)
+[e = *U + &U _mensaje * -> -> -> 4 `i `ui `ux -> -> # *U &U _mensaje `ui `ux -> -> 0 `ui `uc ]
+"277
+[; ;main.c: 277:         case ESTADO_S0:
+[e ( _lcd_clear ..  ]
+"278
+[; ;main.c: 278: 
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"279
+[; ;main.c: 279:             break;
+[e ( _lcd_puts (1 :s 8C ]
+"280
+[; ;main.c: 280: 
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"281
+[; ;main.c: 281:         case ESTADO_S1:
+[e ( _lcd_puts (1 -> &U _mensaje `*Cuc ]
+"283
+[; ;main.c: 283: 
+[e = _estado_actual . `E1451 9 ]
+"284
+[; ;main.c: 284: 
+[e :UE 171 ]
+}
+"287
+[; ;main.c: 287:             {
+[v _regresar_menu `(v ~T0 @X0 1 sf ]
+"288
+[; ;main.c: 288:                 case 'A':
+{
+[e :U _regresar_menu ]
+[f ]
+"289
+[; ;main.c: 289:                     limpiar_buffers();
+[e ( _limpiar_buffers ..  ]
+"290
+[; ;main.c: 290:                     iniciar_captura_mensaje();
+[e ( _mostrar_menu ..  ]
+"291
+[; ;main.c: 291:                     estado_actual = ESTADO_S2;
+[e = _estado_actual . `E1451 1 ]
+"292
+[; ;main.c: 292:                     break;
+[e :UE 178 ]
+}
+"298
+[; ;main.c: 298:                     break;
+[v _procesar_tecla `(v ~T0 @X0 1 sf1`uc ]
+"299
+[; ;main.c: 299: 
+{
+[e :U _procesar_tecla ]
+"298
+[; ;main.c: 298:                     break;
+[v _tecla `uc ~T0 @X0 1 r1 ]
+"299
+[; ;main.c: 299: 
+[f ]
+"300
+[; ;main.c: 300:                 default:
+[v _caracter_hex `uc ~T0 @X0 1 a ]
+"302
+[; ;main.c: 302:                     break;
+[e $U 181  ]
+"303
+[; ;main.c: 303:             }
+{
+"304
+[; ;main.c: 304:             break;
+[e :U 182 ]
+"306
+[; ;main.c: 306:         case ESTADO_S2:
+[e $U 180  ]
+"308
+[; ;main.c: 308:             if ((indice_mensaje < 4u) &&
+[e :U 183 ]
+"313
+[; ;main.c: 313:                 lcd_goto(0u, (uint8_t)(9u + indice_mensaje));
+[e $U 185  ]
+"314
+[; ;main.c: 314:                 lcd_putc((char)tecla);
+{
+"315
+[; ;main.c: 315: 
+[e :U 186 ]
+"316
+[; ;main.c: 316:                 indice_mensaje++;
+[e ( _limpiar_buffers ..  ]
+"317
+[; ;main.c: 317: 
+[e ( _iniciar_captura_mensaje ..  ]
+"318
+[; ;main.c: 318:                 if (indice_mensaje == 4u)
+[e = _estado_actual . `E1451 2 ]
+"319
+[; ;main.c: 319:                 {
+[e $U 184  ]
+"321
+[; ;main.c: 321:                     mostrar_mensaje_completo();
+[e :U 187 ]
+"322
+[; ;main.c: 322:                     estado_actual = ESTADO_S3;
+[e ( _limpiar_buffers ..  ]
+"323
+[; ;main.c: 323:                 }
+[e ( _iniciar_captura_criptograma ..  ]
+"324
+[; ;main.c: 324:             }
+[e = _estado_actual . `E1451 6 ]
+"325
+[; ;main.c: 325:             break;
+[e $U 184  ]
+"327
+[; ;main.c: 327:         case ESTADO_S3:
+[e :U 188 ]
+"329
+[; ;main.c: 329:             {
+[e $U 184  ]
+"330
+[; ;main.c: 330:                 mostrar_prompt_clave();
+}
+[e $U 184  ]
+[e :U 185 ]
+[e [\ _tecla , $ -> -> 65 `ui `i 186
+ , $ -> -> 66 `ui `i 187
+ 188 ]
+[e :U 184 ]
+"331
+[; ;main.c: 331:                 estado_actual = ESTADO_S4;
+[e $U 180  ]
+"333
+[; ;main.c: 333:             break;
+[e :U 189 ]
+"335
+[; ;main.c: 335:         case ESTADO_S4:
+[e $ ! && < -> _indice_mensaje `ui -> 4 `ui != -> ( _mensaje_caracter_valido (1 -> _tecla `uc `i -> 0 `i 190  ]
+"337
+[; ;main.c: 337:             clave = tecla;
+{
+"338
+[; ;main.c: 338: 
+[e = *U + &U _mensaje * -> _indice_mensaje `ux -> -> # *U &U _mensaje `ui `ux -> _tecla `uc ]
+"340
+[; ;main.c: 340:             lcd_putc('*');
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> + -> 9 `ui -> _indice_mensaje `ui `uc ]
+"341
+[; ;main.c: 341: 
+[e ( _lcd_putc (1 -> _tecla `uc ]
+"343
+[; ;main.c: 343:             _delay((unsigned long)((300)*(4000000UL/4000.0)));
+[e ++ _indice_mensaje -> -> 1 `i `uc ]
+"345
+[; ;main.c: 345:             mostrar_resultado_cifrado();
+[e $ ! == -> _indice_mensaje `ui -> 4 `ui 191  ]
+"346
+[; ;main.c: 346:             estado_actual = ESTADO_S5;
+{
+"347
+[; ;main.c: 347:             break;
+[e = *U + &U _mensaje * -> -> -> 4 `i `ui `ux -> -> # *U &U _mensaje `ui `ux -> -> 0 `ui `uc ]
+"348
+[; ;main.c: 348: 
+[e ( _mostrar_mensaje_completo ..  ]
+"349
+[; ;main.c: 349:         case ESTADO_S5:
+[e = _estado_actual . `E1451 3 ]
+"350
+[; ;main.c: 350:             if (tecla == '*')
+}
+[e :U 191 ]
+"351
+[; ;main.c: 351:             {
+}
+[e :U 190 ]
+"352
+[; ;main.c: 352:                 regresar_menu();
+[e $U 180  ]
+"354
+[; ;main.c: 354:             break;
+[e :U 192 ]
+"355
+[; ;main.c: 355: 
+[e $ ! == -> _tecla `ui -> 42 `ui 193  ]
+"356
+[; ;main.c: 356:         case ESTADO_S6:
+{
+"357
+[; ;main.c: 357: 
+[e ( _mostrar_prompt_clave ..  ]
+"358
+[; ;main.c: 358: 
+[e = _estado_actual . `E1451 4 ]
+"359
+[; ;main.c: 359: 
+}
+[e :U 193 ]
+"360
+[; ;main.c: 360: 
+[e $U 180  ]
+"362
+[; ;main.c: 362:             {
+[e :U 194 ]
+"364
+[; ;main.c: 364:             }
+[e = _clave _tecla ]
+"366
+[; ;main.c: 366:             {
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"367
+[; ;main.c: 367:                 caracter_hex = 'F';
+[e ( _lcd_putc (1 -> -> 42 `ui `uc ]
+"370
+[; ;main.c: 370:                      ((tecla >= 'A') && (tecla <= 'D')))
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"372
+[; ;main.c: 372:                 caracter_hex = (char)tecla;
+[e ( _mostrar_resultado_cifrado ..  ]
+"373
+[; ;main.c: 373:             }
+[e = _estado_actual . `E1451 5 ]
+"374
+[; ;main.c: 374:             else
+[e $U 180  ]
+"376
+[; ;main.c: 376:                 break;
+[e :U 195 ]
+"377
+[; ;main.c: 377:             }
+[e $ ! == -> _tecla `ui -> 42 `ui 196  ]
+"378
+[; ;main.c: 378: 
+{
+"379
+[; ;main.c: 379: 
+[e ( _regresar_menu ..  ]
+"380
+[; ;main.c: 380:             if (indice_hex < 8u)
+}
+[e :U 196 ]
+"381
+[; ;main.c: 381:             {
+[e $U 180  ]
+"383
+[; ;main.c: 383: 
+[e :U 197 ]
+"388
+[; ;main.c: 388: 
+[e $ ! == -> _tecla `ui -> 42 `ui 198  ]
+"389
+[; ;main.c: 389:                 if (indice_hex == 8u)
+{
+"390
+[; ;main.c: 390:                 {
+[e = _caracter_hex -> -> 69 `ui `uc ]
+"391
+[; ;main.c: 391:                     hex_entrada[8] = '\0';
+}
+[e $U 199  ]
+"392
+[; ;main.c: 392: 
+[e :U 198 ]
+[e $ ! == -> _tecla `ui -> 35 `ui 200  ]
+"393
+[; ;main.c: 393:                     lcd_clear();
+{
+"394
+[; ;main.c: 394:                     lcd_goto(0u, 0u);
+[e = _caracter_hex -> -> 70 `ui `uc ]
+"395
+[; ;main.c: 395:                     lcd_puts("HEX completo");
+}
+[e $U 201  ]
+"396
+[; ;main.c: 396:                     lcd_goto(1u, 0u);
+[e :U 200 ]
+[e $ ! || && >= -> _tecla `ui -> 48 `ui <= -> _tecla `ui -> 57 `ui && >= -> _tecla `ui -> 65 `ui <= -> _tecla `ui -> 68 `ui 202  ]
+"398
+[; ;main.c: 398: 
+{
+"399
+[; ;main.c: 399:                     estado_actual = ESTADO_S7;
+[e = _caracter_hex -> _tecla `uc ]
+"400
+[; ;main.c: 400:                 }
+}
+[e $U 203  ]
+"401
+[; ;main.c: 401:             }
+[e :U 202 ]
+"402
+[; ;main.c: 402:             break;
+{
+"403
+[; ;main.c: 403: 
+[e $U 180  ]
+"404
+[; ;main.c: 404:         case ESTADO_S7:
+}
+[e :U 203 ]
+[e :U 201 ]
+[e :U 199 ]
+"407
+[; ;main.c: 407:             {
+[e $ ! < -> _indice_hex `ui -> 8 `ui 204  ]
+"408
+[; ;main.c: 408:                 mostrar_prompt_clave();
+{
+"409
+[; ;main.c: 409:                 estado_actual = ESTADO_S8;
+[e = *U + &U _hex_entrada * -> _indice_hex `ux -> -> # *U &U _hex_entrada `ui `ux _caracter_hex ]
+"411
+[; ;main.c: 411:             break;
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc _indice_hex ]
+"412
+[; ;main.c: 412: 
+[e ( _lcd_putc (1 _caracter_hex ]
+"414
+[; ;main.c: 414: 
+[e ++ _indice_hex -> -> 1 `i `uc ]
+"416
+[; ;main.c: 416: 
+[e $ ! == -> _indice_hex `ui -> 8 `ui 205  ]
+"417
+[; ;main.c: 417:             lcd_goto(1u, 0u);
+{
+"418
+[; ;main.c: 418:             lcd_putc('*');
+[e = *U + &U _hex_entrada * -> -> -> 8 `i `ui `ux -> -> # *U &U _hex_entrada `ui `ux -> -> 0 `ui `uc ]
+"420
+[; ;main.c: 420:             _delay((unsigned long)((300)*(4000000UL/4000.0)));
+[e ( _lcd_clear ..  ]
+"421
+[; ;main.c: 421: 
+[e ( _lcd_goto (2 , -> -> 0 `ui `uc -> -> 0 `ui `uc ]
+"422
+[; ;main.c: 422:             mostrar_resultado_descifrado();
+[e ( _lcd_puts (1 :s 9C ]
+"423
+[; ;main.c: 423:             break;
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"424
+[; ;main.c: 424: 
+[e ( _lcd_puts (1 -> &U _hex_entrada `*Cuc ]
+"426
+[; ;main.c: 426:             if (tecla == '*')
+[e = _estado_actual . `E1451 7 ]
+"427
+[; ;main.c: 427:             {
+}
+[e :U 205 ]
+"428
+[; ;main.c: 428:                 regresar_menu();
+}
+[e :U 204 ]
+"429
+[; ;main.c: 429:             }
+[e $U 180  ]
+"431
+[; ;main.c: 431: 
+[e :U 206 ]
+"433
+[; ;main.c: 433:             estado_actual = ESTADO_S0;
+[e $ ! == -> _tecla `ui -> 42 `ui 207  ]
+"434
+[; ;main.c: 434:             break;
+{
+"435
+[; ;main.c: 435:     }
+[e ( _mostrar_prompt_clave ..  ]
+"436
+[; ;main.c: 436: }
+[e = _estado_actual . `E1451 8 ]
+"437
+[; ;main.c: 437: 
+}
+[e :U 207 ]
+"438
+[; ;main.c: 438: 
+[e $U 180  ]
+"440
+[; ;main.c: 440: 
+[e :U 208 ]
+"442
+[; ;main.c: 442: 
+[e = _clave _tecla ]
+"444
+[; ;main.c: 444: {
+[e ( _lcd_goto (2 , -> -> 1 `ui `uc -> -> 0 `ui `uc ]
+"445
+[; ;main.c: 445:     uint8_t tecla;
+[e ( _lcd_putc (1 -> -> 42 `ui `uc ]
+"447
+[; ;main.c: 447:     hardware_init();
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"449
+[; ;main.c: 449: 
+[e ( _mostrar_resultado_descifrado ..  ]
+"450
+[; ;main.c: 450:     while (1)
+[e $U 180  ]
+"452
+[; ;main.c: 452:         if (estado_actual == ESTADO_S0)
+[e :U 209 ]
+"453
+[; ;main.c: 453:         {
+[e $ ! == -> _tecla `ui -> 42 `ui 210  ]
+"454
+[; ;main.c: 454:             lcd_init();
+{
+"455
+[; ;main.c: 455:             limpiar_buffers();
+[e ( _regresar_menu ..  ]
+"456
+[; ;main.c: 456:             mostrar_menu();
+}
+[e :U 210 ]
+"457
+[; ;main.c: 457: 
+[e $U 180  ]
+"459
+[; ;main.c: 459: 
+[e :U 211 ]
+"460
+[; ;main.c: 460: 
+[e = _estado_actual . `E1451 0 ]
+"461
+[; ;main.c: 461:             keypad_habilitar_ioc();
+[e $U 180  ]
+"462
+[; ;main.c: 462:         }
+}
+[e $U 180  ]
+[e :U 181 ]
+[e [\ -> _estado_actual `ui , $ -> . `E1451 0 `ui 182
+ , $ -> . `E1451 1 `ui 183
+ , $ -> . `E1451 2 `ui 189
+ , $ -> . `E1451 3 `ui 192
+ , $ -> . `E1451 4 `ui 194
+ , $ -> . `E1451 5 `ui 195
+ , $ -> . `E1451 6 `ui 197
+ , $ -> . `E1451 7 `ui 206
+ , $ -> . `E1451 8 `ui 208
+ , $ -> . `E1451 9 `ui 209
+ 211 ]
+[e :U 180 ]
+"463
+[; ;main.c: 463: 
+[e :UE 179 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"470
+[; ;main.c: 470:             procesar_tecla(tecla);
+[v _main `(v ~T0 @X0 1 ef ]
+"471
+[; ;main.c: 471: 
+{
+[e :U _main ]
+[f ]
+"472
+[; ;main.c: 472: 
+[v _tecla `uc ~T0 @X0 1 a ]
+"474
+[; ;main.c: 474: 
+[e ( _hardware_init ..  ]
+"475
+[; ;main.c: 475: 
+[e = _estado_actual . `E1451 0 ]
+"477
+[; ;main.c: 477:         }
+[e :U 214 ]
+"478
+[; ;main.c: 478:     }
+{
+"479
+[; ;main.c: 479: }
+[e $ ! == -> _estado_actual `ui -> . `E1451 0 `ui 216  ]
+"480
+{
+"481
+[e ( _lcd_init ..  ]
+"482
+[e ( _limpiar_buffers ..  ]
+"483
+[e ( _mostrar_menu ..  ]
+"485
+[e = _estado_actual . `E1451 1 ]
+"488
+[e ( _keypad_habilitar_ioc ..  ]
+"489
+}
+[e :U 216 ]
+"492
+[e $ ! != -> _g_bandera_tecla `ui -> 0 `ui 217  ]
+"493
+{
+"494
+[e = _tecla _g_tecla_evento ]
+"495
+[e = _g_bandera_tecla -> -> 0 `ui `uc ]
+"497
+[e ( _procesar_tecla (1 _tecla ]
+"500
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `ul `d .4000.0 `ul ]
+"503
+[e ( _keypad_rearme ..  ]
+"504
+}
+[e :U 217 ]
+"505
+}
+[e :U 213 ]
+[e $U 214  ]
+[e :U 215 ]
+"506
+[e :UE 212 ]
+}
+[a 2C 66 58 32 68 101 115 99 105 102 114 97 114 0 ]
+[a 1C 65 58 32 67 105 102 114 97 114 0 ]
+[a 3C 77 101 110 115 97 106 101 32 99 111 109 112 108 101 116 111 0 ]
+[a 9C 72 69 88 32 99 111 109 112 108 101 116 111 0 ]
+[a 8C 77 101 110 115 97 106 101 32 79 114 105 103 105 110 97 108 0 ]
+[a 4C 73 110 103 114 101 115 101 32 99 108 97 118 101 58 0 ]
+[a 6C 67 114 105 112 116 111 103 114 97 109 97 32 72 69 88 58 0 ]
+[a 7C 67 105 102 114 97 100 111 32 40 72 69 88 41 58 0 ]
+[a 5C 77 101 110 115 97 106 101 58 32 0 ]
